@@ -1,0 +1,35 @@
+/** CORE **/
+body 
+{
+    background-color: darkslategray;
+    /** **/
+    background-image: url("/static/images/misc/Repeatable.png");
+    background-size: 150px 150px;
+    background-repeat: repeat;
+    animation: backgroundCycle 10s linear infinite;
+}
+
+
+/** EVENTS **/
+.expandable:hover
+{
+    transform: scale(1.05);
+}
+
+.expandable 
+{
+    transition: transform 0.3s;    
+}
+
+/** ANIMATIONS **/
+@keyframes backgroundCycle 
+{
+    0% 
+    {
+        background-position: 0 0;
+    }
+    100% 
+    {
+        background-position: 150px 150px;
+    }
+}
