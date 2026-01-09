@@ -26,15 +26,15 @@ The system is designed to run efficiently in-browser while supporting multiple c
 ## 🧩 Tech Stack
 
 ### Backend
-- **Framework:** :contentReference[oaicite:0]{index=0}
-- **Database:** :contentReference[oaicite:1]{index=1}
+- **Framework:** Flask + Flask Dependencies
+- **Database:** MongoDB
 - **Auth & Security:** Werkzeug, CSRF protection, Google reCAPTCHA
 - **Networking:** UDP-style WebSocket replication
 - **Templating:** Jinja2
 
 ### Frontend
-- **Rendering:** HTML Canvas (Raycasting)
-- **UI:** :contentReference[oaicite:2]{index=2} + layered custom CSS
+- **Rendering:** P5.js + HTML Canvas (Raycasting)
+- **UI:** JINJA2 + Bootstrap + layered custom CSS
 - **Audio:** Web Audio API
 - **Input:** Keyboard + Mouse
 
@@ -134,7 +134,8 @@ Some effects are intentionally capped at **30 FPS** to reduce processing cost.
 
 ### Logging & Events
 - Join / leave logging
-- Chat logging via **:contentReference[oaicite:3]{index=3}**
+- Chat logging
+- Webhook to Discord Channels
 
 ---
 
@@ -191,7 +192,7 @@ Security is implemented at every layer:
 - User access levels
 - Multi-factor authentication via email (Gmail bot)
 - Environment variable loading for sensitive data
-- NoSQL storage via **:contentReference[oaicite:4]{index=4}** to eliminate SQL injection vectors
+- NoSQL storage via MongoDB DQL to eliminate SQL injection vectors
 
 ---
 
@@ -207,7 +208,7 @@ Security is implemented at every layer:
 
 ## 🎨 Frontend Architecture
 
-- Responsive layouts via **:contentReference[oaicite:5]{index=5}**
+- Responsive layouts via Bootstrap
 - Layered CSS structure
 - Jinja2 layered templating
 - Reactive UI updates without full reloads
@@ -219,12 +220,6 @@ Security is implemented at every layer:
 - Sensitive data loaded via environment variables
 - API keys and secrets never hardcoded
 - Configurable per-environment settings
-
----
-
-## 📜 License
-
-MIT (or replace with your preferred license)
 
 ---
 
